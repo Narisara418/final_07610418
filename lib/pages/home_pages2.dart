@@ -45,7 +45,6 @@ class _HomePage2State extends State<HomePage2> {
                   ),
                 ),
               ),
-              for(int i=1;i<QuizData.list.length;i++)
 
                 Padding(
                   padding: const EdgeInsets.all(16.0),
