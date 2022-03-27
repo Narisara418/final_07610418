@@ -47,11 +47,14 @@ class _HomePage2State extends State<HomePage2> {
               ),
               for(int i=1;i<QuizData.list.length;i++)
 
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    '${quizItem.choice_list.toString()}',
-                    style: TextStyle(fontSize: 30.0),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      '${quizItem.choice_list.toString()}',
+                      style: TextStyle(fontSize: 30.0),
+                    ),
                   ),
                 )
             ],
