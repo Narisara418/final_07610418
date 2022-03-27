@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:final07610418/models/quiz_item.dart';
 import 'package:final07610418/pages/Quizdata.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,11 +26,15 @@ class _HomePage2State extends State<HomePage2> {
 
   Widget build(BuildContext context) {
     var quizItem = QuizData.list[_qIndex];
+    var t = quizItem.choice_list.toString();
+
+
     return Scaffold(
       body: Stack(
         children: [
           Column(
             children: [
+              // test(),
               AspectRatio(
                 aspectRatio: 1.7,
                 child: Padding(
@@ -39,6 +46,7 @@ class _HomePage2State extends State<HomePage2> {
                 ),
               ),
               for(int i=1;i<QuizData.list.length;i++)
+
                 ElevatedButton(
                   onPressed: () {},
                   child: Text(
@@ -52,4 +60,19 @@ class _HomePage2State extends State<HomePage2> {
       ),
     );
   }
+
+  // test(){
+  //   var list = [];
+  //   list.add({
+  //     'name': 'abc',
+  //     'value': 111,
+  //   });
+  //   list.add({
+  //     'name': 'xyz',
+  //     'value': 222,
+  //   });
+  //   Map<String, dynamic> requestMap = {};
+  //   requestMap['list'] = list;
+  //   print(jsonEncode(requestMap));
+  // }
 }

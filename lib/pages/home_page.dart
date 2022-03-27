@@ -75,12 +75,12 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
 
+                        // Text(
+                        //   '${quiz.answer.toString()}',
+                        //   style: TextStyle(fontSize: 15.0),
+                        // ),
                         Text(
-                          '${quiz.answer.toString()}',
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                        Text(
-                          '${quiz.choice_list.toString()}',
+                          'QUIZ ${index+1}',
                           style: TextStyle(fontSize: 15.0),
                         ),
                       ],
@@ -111,8 +111,13 @@ class _HomePageState extends State<HomePage> {
       QuizData.list = apiResult.data
           .map<QuizItem>((item) => QuizItem.fromJson(item))
           .toList();
+
+
+
+
        print(QuizData.list);
     });
+
 
     //print('status: $status, Message: $message, Number of food: ${data.length}');
 
